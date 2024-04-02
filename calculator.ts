@@ -7,15 +7,13 @@ const answer = await inquirer.prompt([
 
 { message:"Enter Second Number:",
   type:"number",
-  name:"secondNumber"
-},
+  name:"secondNumber"},
 
 { message:"Select one of the Operator to perform Operation:",
   type:"list",
   name:"operator",
   choices:["Addition", "Subtraction", "Multiplication", "Division", "Exponentiation"]}
 ]);
-
 if (answer.operator === "Addition") {
     console.log(answer.firstNumber + answer.secondNumber)
 } 

@@ -1,13 +1,17 @@
-import inquirer from "inquirer";
-import Chalk from "chalk";
-const answer = await inquirer.prompt([
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const inquirer_1 = __importDefault(require("inquirer"));
+const chalk_1 = __importDefault(require("chalk"));
+const answer = await inquirer_1.default.prompt([
     { message: "Enter First Number:",
         type: "number",
         name: "firstNumber" },
     { message: "Enter Second Number:",
         type: "number",
-        name: "secondNumber"
-    },
+        name: "secondNumber" },
     { message: "Select one of the Operator to perform Operation:",
         type: "list",
         name: "operator",
@@ -29,5 +33,5 @@ else if (answer.operator === "Exponentiation") {
     console.log(answer.firstNumber ** answer.secondNumber);
 }
 else {
-    console.log(Chalk.red("Invalid Operator!"));
+    console.log(chalk_1.default.red("Invalid Operator!"));
 }
